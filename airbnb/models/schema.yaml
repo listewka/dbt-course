@@ -42,7 +42,7 @@ models:
       - name: host_name
         data_type: string          
 
-     - name: is_superhost
+      - name: is_superhost
        data_tests:
          - accepted_values:
              arguments:
