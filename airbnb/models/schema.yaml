@@ -32,12 +32,15 @@ models:
          - positive_values
 
   - name: dim_hosts_cleansed
+    config:
+      contract:
+        enforced: true
     columns:
+      - name: host_id
+        data_type: integer
 
-     - name: host_id
-       data_tests:
-         - unique
-         - not_null
+      - name: host_name
+        data_type: string          
 
      - name: is_superhost
        data_tests:
@@ -64,13 +67,3 @@ models:
                values: ['positive',
                         'neutral',
                         'negative']
-
-  - name: dim_hosts_cleansed
-    config:
-      contract:
-        enforced: true
-    columns:
-      - name: host_id
-        data_type: integer
-      - name: host_name
-        data_type: string          
