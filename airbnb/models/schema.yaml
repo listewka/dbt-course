@@ -56,9 +56,9 @@ models:
              to: ref('dim_listings_cleansed')
              field: listing_id
 
-      - name: REVIEW_SENTIMENT
-        data_tests:
-          - accepted_values:
-              values: ['positive',
-                       'neutral',
-                       'negative']
+     - name: REVIEW_SENTIMENT
+       data_tests:
+         - accepted_values:
+             values: ['positive',
+                      'neutral',
+                      'negative']
